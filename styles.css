@@ -259,6 +259,13 @@ h2 {
 .project-page-card {
   padding: 24px;
 }
+/* 
+.stack-card {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:row;
+} */
 
 .check-list {
   padding-left: 20px;
@@ -268,6 +275,7 @@ h2 {
 .pill-list,
 .tag-row {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -296,8 +304,8 @@ h2 {
 
 .tech-icon,
 .contact-icon {
-  width: 24px;
-  height: 24px;
+  width: 44px;
+  height: 44px;
   display: block;
 }
 
@@ -324,7 +332,7 @@ h2 {
 }
 
 .project-preview {
-  height: 170px;
+  height: 370px;
   width: 100%;
   border-radius: 16px;
   margin-bottom: 16px;
@@ -387,8 +395,8 @@ h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
   background: rgba(255,255,255,0.06);
   border: 1px solid var(--border);

@@ -15,7 +15,7 @@ const techIcons = {
   'Vue.js': 'https://cdn.simpleicons.org/vuedotjs/4fc08d',
   'Node.js': 'https://cdn.simpleicons.org/nodedotjs/339933',
   Flutter: 'https://cdn.simpleicons.org/flutter/02569b',
-  Go: 'https://cdn.simpleicons.org/go/00add8',
+  Golang: 'https://cdn.simpleicons.org/go/00add8',
   'Java Spring Boot': 'https://cdn.simpleicons.org/spring/6db33f',
   Docker: 'https://cdn.simpleicons.org/docker/2496ed',
   'CI/CD': 'https://cdn.simpleicons.org/githubactions/2088ff',
@@ -61,7 +61,7 @@ function renderContactLinks() {
   if (!container) return;
 
   const contacts = [
-    { label: '(+66) 96-734-9476', href: 'tel:+66967349476', icon: 'https://cdn.simpleicons.org/phone/34d399' },
+    { label: '(+66) 96-734-9476', href: 'tel:+66967349476', icon: 'https://cdn.simpleicons.org/githubsponsors/34d399' },
     { label: 'apisitthaweboon@gmail.com', href: 'mailto:apisitthaweboon@gmail.com', icon: 'https://cdn.simpleicons.org/gmail/d14836' },
     { label: 'Bangkok, Thailand', href: '#contact', icon: 'https://cdn.simpleicons.org/googlemaps/4285f4' },
     { label: 'github.com/Yayawak', href: 'https://github.com/Yayawak', icon: 'https://cdn.simpleicons.org/github/181717' }
@@ -81,9 +81,9 @@ function renderSkillGroups() {
 
   const groups = [
     { title: 'Frontend', items: ['Flutter', 'React.js', 'Next.js', 'Vue.js', 'Node.js', 'Tailwind', 'Bootstrap', 'MaterialUI', 'SvelteKit'] },
-    { title: 'Backend & APIs', items: ['RESTful APIs', 'Micro-services', 'WebSocket', 'RabbitMQ', 'Redis', 'ORM', 'Java Spring Boot', 'Node.js'] },
+    { title: 'Backend & APIs', items: ['RESTful APIs', 'WebSocket', 'RabbitMQ', 'Redis', 'ORM', 'Java Spring Boot', 'Node.js'] },
     { title: 'Languages', items: ['Golang', 'Java', 'Python', 'TypeScript', 'JavaScript', 'Kotlin', 'Dart', 'Shell', 'SQL'] },
-    { title: 'Databases & DevOps', items: ['PostgreSQL', 'MySQL', 'SQLite', 'MongoDB', 'Docker', 'Docker Compose', 'CI/CD', 'Linux', 'Nginx', 'DigitalOcean', 'Git', 'GitHub'] }
+    { title: 'Databases & DevOps', items: ['PostgreSQL', 'MySQL', 'SQLite', 'MongoDB', 'Docker', 'CI/CD', 'Linux', 'Nginx', 'DigitalOcean', 'Git', 'GitHub'] }
   ];
 
   container.innerHTML = groups.map((group) => `

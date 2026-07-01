@@ -34,7 +34,7 @@
     "id": "deekub",
     "title": "Deekub",
     "short": "A location-based social platform for nightlife venues with real-time interactions and discovery features.",
-    "image": "assets/mock-project.svg",
+    "image": "assets/Deekub landing.png",
     "year": "2022",
     "summary": "Created a mobile-first social platform connecting nightlife venues in Bangkok through location-aware experiences and real-time features.",
     "description": [
@@ -42,7 +42,7 @@
       "Developed a cross-platform mobile app with real-time messaging, venue check-ins, and social discovery.",
       "Implemented REST APIs, authentication, media storage, notifications, and deployment pipelines."
     ],
-    "stack": ["Go", "Flutter", "PostgreSQL", "Docker", "WebSocket", "Redis"],
+    "stack": ["Golang", "Flutter", "PostgreSQL", "Docker", "WebSocket", "Redis"],
     "highlights": ["Real-time messaging", "Location features", "Clean architecture", "Cloud deployment"]
   },
   {
