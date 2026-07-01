@@ -7,10 +7,7 @@
     <title>Apisit Thaweboon | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -24,8 +21,8 @@
         </button>
         <nav class="nav-links" aria-label="Primary navigation">
           <a href="#about">About</a>
-          <a href="#services">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="#techstack">Tech Stack</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -34,25 +31,30 @@
         <section class="hero section-grid">
           <div class="hero-copy">
             <p class="eyebrow">Software Engineer • Full-Stack Developer</p>
-            <h1>I build scalable web, mobile, and cloud-native applications for real-world users.</h1>
+            <h1>I build scalable web, mobile, and cloud-native products for real-world users.</h1>
             <p class="hero-text">
               Software engineer with 4+ years of experience delivering production-grade platforms using Go, Flutter, React/Next.js, Node.js, and Java. I specialize in backend architecture, REST APIs, cloud deployment, and AI-integrated products.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#projects">View Projects</a>
-              <a class="btn btn-secondary" href="#contact">Let's Talk</a>
+              <a class="btn btn-primary" href="#projects">Explore My Work</a>
+              <a class="btn btn-secondary" href="#contact">Let’s Connect</a>
             </div>
             <ul class="stats">
               <li><strong>4+</strong><span>Years building products</span></li>
-              <li><strong>3+</strong><span>Launch-ready platforms</span></li>
-              <li><strong>Remote-ready</strong><span>Cloud and CI/CD expertise</span></li>
+              <li><strong>6+</strong><span>Projects launched</span></li>
+              <li><strong>Remote-ready</strong><span>Cloud and CI/CD workflow</span></li>
             </ul>
           </div>
           <div class="hero-card">
             <div class="card-glow"></div>
             <div class="avatar">AT</div>
             <h3>Open to Software Engineer and Full-Stack opportunities</h3>
-            <p>(+66) 96-734-9476<br />apisitthaweboon@gmail.com<br />Bangkok, Thailand<br /><a href="https://github.com/Yayawak" target="_blank" rel="noreferrer" class="text-link">github.com/Yayawak</a></p>
+            <p>
+              (+66) 96-734-9476<br />
+              apisitthaweboon@gmail.com<br />
+              Bangkok, Thailand<br />
+              <a href="https://github.com/Yayawak" target="_blank" rel="noreferrer" class="text-link">github.com/Yayawak</a>
+            </p>
             <a href="#about" class="text-link">Learn more about my background →</a>
           </div>
         </section>
@@ -60,70 +62,107 @@
         <section id="about" class="section">
           <div class="section-heading">
             <p class="eyebrow">About</p>
-            <h2>Education and professional focus.</h2>
+            <h2>Education, experience, and a product-minded engineering approach.</h2>
           </div>
           <div class="about-grid">
-            <div>
+            <div class="about-card">
               <p>
                 I am currently studying at KMITL University, Thailand, where I earned a Bachelor of Science in Computer Science with a GPA of 3.46/4.0 and Second Class Honours. My coursework covered software engineering, business analysis, data structures, algorithms, and database systems.
               </p>
               <p>
-                My work spans custom web applications, payment-enabled marketplaces, AI image generation platforms, and location-based social apps. I enjoy building systems that are reliable, secure, and easy to scale.
+                My work spans custom web applications, payment-enabled marketplaces, AI image generation platforms, and location-based social apps. I enjoy building systems that are reliable, secure, highly available, and easy to scale.
               </p>
             </div>
-            <div class="pill-list">
-              <span>Software Engineering</span>
-              <span>System Design</span>
-              <span>Cyber Security</span>
-              <span>CI/CD</span>
-              <span>Cloud Deployment</span>
-              <span>Team Leadership</span>
+            <div class="about-card">
+              <h3>What I focus on</h3>
+              <ul class="check-list">
+                <li>Scalable backend and API design</li>
+                <li>Clean frontend experiences with React/Next.js or Flutter</li>
+                <li>Cloud deployment, CI/CD, and system reliability</li>
+                <li>Security-sensitive product development</li>
+              </ul>
             </div>
-          </div>
-        </section>
-
-        <section id="services" class="section">
-          <div class="section-heading">
-            <p class="eyebrow">Skills</p>
-            <h2>Core strengths shaped by real product work.</h2>
-          </div>
-          <div class="card-grid">
-            <article class="info-card">
-              <h3>Full-Stack Development</h3>
-              <p>Built modern web applications with React, Next.js, Vue, Node.js, and Tailwind using clean architecture and responsive UI.</p>
-            </article>
-            <article class="info-card">
-              <h3>Backend & Systems</h3>
-              <p>Designed RESTful APIs, authentication flows, real-time services, Redis caching, messaging queues, and transactional systems.</p>
-            </article>
-            <article class="info-card">
-              <h3>Cloud & DevOps</h3>
-              <p>Delivered Docker-based deployments, CI/CD pipelines, Linux server administration, Nginx, and cloud hosting workflows.</p>
-            </article>
           </div>
         </section>
 
         <section id="projects" class="section">
           <div class="section-heading">
-            <p class="eyebrow">Featured Work</p>
-            <h2>Selected projects that reflect my CV.</h2>
+            <p class="eyebrow">Selected Work</p>
+            <h2>Projects I’ve built and shipped.</h2>
           </div>
           <div class="card-grid project-grid">
             <article class="project-card">
-              <div class="project-preview preview-one"></div>
+              <div class="project-preview preview-marketplace"></div>
               <h3>Marketplace Website</h3>
-              <p>Built a full-stack marketplace platform for digital goods and gaming services with concurrent order processing, transactional consistency, payments, and admin tools.</p>
+              <p>Built a full-stack marketplace for digital goods and gaming services with concurrent order processing, payments, and admin tools.</p>
+              <div class="tag-row">
+                <span>React</span><span>Node.js</span><span>MySQL</span><span>Redis</span>
+              </div>
+              <a class="text-link" href="projects/marketplace.html">View case study →</a>
             </article>
+
             <article class="project-card">
-              <div class="project-preview preview-two"></div>
+              <div class="project-preview preview-ai"></div>
               <h3>AI Image Generation Platform</h3>
-              <p>Developed a Next.js product that lets users generate artwork from text prompts with credit management, authentication, and admin dashboard features.</p>
+              <p>Created a Next.js experience for generating artwork from prompts with credit management, auth, and admin dashboards.</p>
+              <div class="tag-row">
+                <span>Next.js</span><span>OpenAI</span><span>MySQL</span><span>CI/CD</span>
+              </div>
+              <a class="text-link" href="projects/ai-image.html">View case study →</a>
             </article>
+
             <article class="project-card">
-              <div class="project-preview preview-three"></div>
+              <div class="project-preview preview-deekub"></div>
               <h3>Deekub</h3>
-              <p>Created a location-based social platform for nightlife venues in Bangkok, featuring real-time messaging, check-ins, discovery, and scalable backend services.</p>
+              <p>Developed a location-based social platform for nightlife venues with real-time messaging, check-ins, and discovery features.</p>
+              <div class="tag-row">
+                <span>Go</span><span>Flutter</span><span>PostgreSQL</span><span>Docker</span>
+              </div>
+              <a class="text-link" href="projects/deekub.html">View case study →</a>
             </article>
+
+            <article class="project-card">
+              <div class="project-preview preview-business"></div>
+              <h3>Business Platform & Admin Systems</h3>
+              <p>Delivered custom web products for clients with dashboards, user management, workflows, and secure deployments.</p>
+              <div class="tag-row">
+                <span>Vue</span><span>Spring Boot</span><span>PostgreSQL</span><span>Nginx</span>
+              </div>
+              <a class="text-link" href="projects/business-platform.html">View case study →</a>
+            </article>
+          </div>
+        </section>
+
+        <section id="techstack" class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Tech Stack</p>
+            <h2>Technologies I’ve used across the stack.</h2>
+          </div>
+          <div class="stack-grid">
+            <div class="stack-card">
+              <h3>Frontend</h3>
+              <div class="pill-list">
+                <span>Flutter</span><span>React.js</span><span>Next.js</span><span>Vue.js</span><span>Node.js</span><span>Tailwind</span><span>Bootstrap</span><span>MaterialUI</span><span>SvelteKit</span>
+              </div>
+            </div>
+            <div class="stack-card">
+              <h3>Backend & APIs</h3>
+              <div class="pill-list">
+                <span>RESTful APIs</span><span>Micro-services</span><span>WebSocket</span><span>RabbitMQ</span><span>Redis</span><span>ORM</span><span>Java Spring Boot</span><span>Node.js</span>
+              </div>
+            </div>
+            <div class="stack-card">
+              <h3>Languages</h3>
+              <div class="pill-list">
+                <span>Golang</span><span>Java</span><span>Python</span><span>TypeScript</span><span>JavaScript</span><span>Kotlin</span><span>Dart</span><span>Shell</span><span>SQL</span>
+              </div>
+            </div>
+            <div class="stack-card">
+              <h3>Databases & DevOps</h3>
+              <div class="pill-list">
+                <span>PostgreSQL</span><span>MySQL</span><span>SQLite</span><span>MongoDB</span><span>Docker</span><span>Docker Compose</span><span>CI/CD</span><span>Linux</span><span>Nginx</span><span>DigitalOcean</span><span>Git</span><span>GitHub</span>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -133,8 +172,12 @@
             <h2>Let’s build something impactful together.</h2>
           </div>
           <div class="contact-card">
-            <p>Interested in working together or discussing a product idea? I’m available for software engineering and full-stack development opportunities.</p>
-            <a class="btn btn-primary" href="mailto:apisitthaweboon@gmail.com">apisitthaweboon@gmail.com</a>
+            <p>Open to software engineering and full-stack opportunities. Reach out for collaboration, freelance work, or product development.</p>
+            <div class="contact-links">
+              <a class="btn btn-primary" href="mailto:apisitthaweboon@gmail.com">apisitthaweboon@gmail.com</a>
+              <a class="btn btn-secondary" href="tel:+66967349476">(+66) 96-734-9476</a>
+              <a class="btn btn-secondary" href="https://github.com/Yayawak" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
           </div>
         </section>
       </main>
