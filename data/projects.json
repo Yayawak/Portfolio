@@ -1,0 +1,63 @@
+[
+  {
+    "id": "marketplace",
+    "title": "Marketplace Website",
+    "short": "A full-stack marketplace for digital goods and gaming services with payments, concurrency, and admin tooling.",
+    "image": "assets/mock-project.svg",
+    "year": "2024",
+    "summary": "Built a scalable marketplace experience for virtual goods and gaming services, combining a polished storefront with transactional backend systems.",
+    "description": [
+      "Developed a full-stack marketplace platform for virtual goods and gaming-related services using React.js, Express.js, MySQL, and Redis.",
+      "Designed backend architecture for concurrent order processing and transactional consistency.",
+      "Integrated payment gateways, user verification systems, and third-party providers.",
+      "Implemented order management, admin dashboards, and security controls based on OWASP best practices."
+    ],
+    "stack": ["React.js", "Node.js", "MySQL", "Redis", "Docker", "CI/CD"],
+    "highlights": ["Concurrent order flow", "Transaction-safe payments", "Admin control panel", "Secure authentication"]
+  },
+  {
+    "id": "ai-image",
+    "title": "AI Image Generation Platform",
+    "short": "An AI-powered product for transforming text prompts into customized artwork with usage credits and dashboards.",
+    "image": "assets/mock-project.svg",
+    "year": "2023",
+    "summary": "Delivered an AI image generation experience with prompt-driven generation, subscription-style credit handling, and a business-friendly admin layer.",
+    "description": [
+      "Built the frontend with Next.js and connected the service to the ChatGPT Sora API.",
+      "Implemented user authentication, credit management, and generation usage logic.",
+      "Designed core features for user administration, transaction tracking, and internal control tools."
+    ],
+    "stack": ["Next.js", "TypeScript", "MySQL", "Node.js", "CI/CD"],
+    "highlights": ["Prompt-based generation", "Credit system", "Authentication", "Admin insight tools"]
+  },
+  {
+    "id": "deekub",
+    "title": "Deekub",
+    "short": "A location-based social platform for nightlife venues with real-time interactions and discovery features.",
+    "image": "assets/mock-project.svg",
+    "year": "2022",
+    "summary": "Created a mobile-first social platform connecting nightlife venues in Bangkok through location-aware experiences and real-time features.",
+    "description": [
+      "Built scalable backend services with clean architecture and dependency injection.",
+      "Developed a cross-platform mobile app with real-time messaging, venue check-ins, and social discovery.",
+      "Implemented REST APIs, authentication, media storage, notifications, and deployment pipelines."
+    ],
+    "stack": ["Go", "Flutter", "PostgreSQL", "Docker", "WebSocket", "Redis"],
+    "highlights": ["Real-time messaging", "Location features", "Clean architecture", "Cloud deployment"]
+  },
+  {
+    "id": "business-platform",
+    "title": "Business Platform & Admin Systems",
+    "short": "Custom web products for business workflows, dashboards, and internal operations.",
+    "image": "assets/mock-project.svg",
+    "year": "2024",
+    "summary": "Delivered custom business-platform solutions with secure dashboards, workflows, and reliable deployment setups.",
+    "description": [
+      "Built internal and client-facing dashboards with role-based access and workflow management.",
+      "Delivered maintainable web applications using modern frontends and backend APIs.",
+      "Supported business operations through automation, monitoring, and efficient deployment practices."
+    ],
+    "stack": ["Vue.js", "Spring Boot", "PostgreSQL", "Docker", "Nginx", "Linux"],
+    "highlights": ["Role-based access", "Business workflows", "Secure deployment", "Operational dashboards"]
+  }
+]

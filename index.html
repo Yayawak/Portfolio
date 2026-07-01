@@ -7,7 +7,7 @@
     <title>Apisit Thaweboon | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -31,7 +31,7 @@
         <section class="hero section-grid">
           <div class="hero-copy">
             <p class="eyebrow">Software Engineer • Full-Stack Developer</p>
-            <h1>I build scalable web, mobile, and cloud-native products for real-world users.</h1>
+            <h1>I build bold, scalable web, mobile, and cloud-native products for real-world users.</h1>
             <p class="hero-text">
               Software engineer with 4+ years of experience delivering production-grade platforms using Go, Flutter, React/Next.js, Node.js, and Java. I specialize in backend architecture, REST APIs, cloud deployment, and AI-integrated products.
             </p>
@@ -49,11 +49,11 @@
             <div class="card-glow"></div>
             <div class="avatar">AT</div>
             <h3>Open to Software Engineer and Full-Stack opportunities</h3>
-            <p>
-              (+66) 96-734-9476<br />
-              apisitthaweboon@gmail.com<br />
-              Bangkok, Thailand<br />
-              <a href="https://github.com/Yayawak" target="_blank" rel="noreferrer" class="text-link">github.com/Yayawak</a>
+            <p class="contact-block">
+              <span>📞 (+66) 96-734-9476</span><br />
+              <span>✉️ apisitthaweboon@gmail.com</span><br />
+              <span>📍 Bangkok, Thailand</span><br />
+              <a href="https://github.com/Yayawak" target="_blank" rel="noreferrer" class="text-link">💻 github.com/Yayawak</a>
             </p>
             <a href="#about" class="text-link">Learn more about my background →</a>
           </div>
@@ -184,5 +184,23 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+      fetch('data/projects.json')
+        .then((response) => response.json())
+        .then((projects) => {
+          const grid = document.getElementById('project-grid');
+          grid.innerHTML = projects.map((project) => `
+            <article class="project-card">
+              <img class="project-preview" src="${project.image}" alt="${project.title}" />
+              <h3>${project.title}</h3>
+              <p>${project.short}</p>
+              <div class="tag-row">
+                ${project.stack.slice(0, 4).map((tech) => `<span>${tech}</span>`).join('')}
+              </div>
+              <a class="text-link" href="project.html?id=${project.id}">View case study →</a>
+            </article>
+          `).join('');
+        });
+    </script>
   </body>
 </html>

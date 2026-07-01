@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project | Apisit Thaweboon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell project-page">
+      <a class="back-link" href="index.html">← Back to portfolio</a>
+      <section class="project-hero">
+        <p class="eyebrow">Case Study</p>
+        <h1 id="project-title">Project</h1>
+        <p id="project-summary"></p>
+        <div class="project-meta" id="project-meta"></div>
+      </section>
+
+      <section class="detail-grid">
+        <article class="project-page-card">
+          <h3>What I built</h3>
+          <ul id="project-description"></ul>
+        </article>
+        <article class="project-page-card">
+          <h3>Tech stack</h3>
+          <div class="pill-list" id="project-stack"></div>
+          <h3 style="margin-top: 20px;">Highlights</h3>
+          <ul id="project-highlights"></ul>
+        </article>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const projectId = params.get('id');
+      const projectTitle = document.getElementById('project-title');
+      const projectSummary = document.getElementById('project-summary');
+      const projectMeta = document.getElementById('project-meta');
+      const projectDescription = document.getElementById('project-description');
+      const projectStack = document.getElementById('project-stack');
+      const projectHighlights = document.getElementById('project-highlights');
+
+      fetch('data/projects.json')
+        .then((response) => response.json())
+        .then((projects) => {
+          const project = projects.find((item) => item.id === projectId);
+          if (!project) {
+            projectTitle.textContent = 'Project not found';
+            projectSummary.textContent = 'The requested project could not be found.';
+            return;
+          }
+
+          document.title = `${project.title} | Apisit Thaweboon`;
+          projectTitle.textContent = project.title;
+          projectSummary.textContent = project.summary;
+          projectMeta.innerHTML = `<span>${project.year}</span>`;
+
+          projectDescription.innerHTML = project.description.map((item) => `<li>${item}</li>`).join('');
+          projectStack.innerHTML = project.stack.map((tech) => `<span>${tech}</span>`).join('');
+          projectHighlights.innerHTML = project.highlights.map((item) => `<li>${item}</li>`).join('');
+        });
+    </script>
+  </body>
+</html>
