@@ -21,7 +21,8 @@
 
       <section class="detail-grid">
         <article class="project-page-card">
-          <h3>What I built</h3>
+          <div class="project-gallery" id="project-gallery"></div>
+          <h3 style="margin-top: 20px;">What I built</h3>
           <ul id="project-description"></ul>
         </article>
         <article class="project-page-card">
@@ -34,35 +35,5 @@
     </div>
 
     <script src="script.js"></script>
-    <script>
-      const params = new URLSearchParams(window.location.search);
-      const projectId = params.get('id');
-      const projectTitle = document.getElementById('project-title');
-      const projectSummary = document.getElementById('project-summary');
-      const projectMeta = document.getElementById('project-meta');
-      const projectDescription = document.getElementById('project-description');
-      const projectStack = document.getElementById('project-stack');
-      const projectHighlights = document.getElementById('project-highlights');
-
-      fetch('data/projects.json')
-        .then((response) => response.json())
-        .then((projects) => {
-          const project = projects.find((item) => item.id === projectId);
-          if (!project) {
-            projectTitle.textContent = 'Project not found';
-            projectSummary.textContent = 'The requested project could not be found.';
-            return;
-          }
-
-          document.title = `${project.title} | Apisit Thaweboon`;
-          projectTitle.textContent = project.title;
-          projectSummary.textContent = project.summary;
-          projectMeta.innerHTML = `<span>${project.year}</span>`;
-
-          projectDescription.innerHTML = project.description.map((item) => `<li>${item}</li>`).join('');
-          projectStack.innerHTML = project.stack.map((tech) => `<span>${tech}</span>`).join('');
-          projectHighlights.innerHTML = project.highlights.map((item) => `<li>${item}</li>`).join('');
-        });
-    </script>
   </body>
 </html>
