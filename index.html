@@ -9,95 +9,211 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="icon" type="image/x-icon" href="assets/profile-placeholder.svg">
   </head>
   <body>
-    <div class="site-shell">
+    <div class="nav-wrap" id="nav-wrap">
       <header class="topbar">
-        <a class="brand" href="#home">APISIT THAWEBOON</a>
-        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <div class="nav-progress" id="nav-progress"></div>
+        <a class="brand" href="#home">APISIT T.</a>
+        <nav class="nav-links" id="nav-links" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <!-- <a href="#experience">Experience</a> -->
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <nav class="nav-links" aria-label="Primary navigation">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#techstack">Tech Stack</a>
-          <a href="#contact">Contact</a>
-        </nav>
       </header>
+    </div>
 
+    <div class="site-shell">
       <main id="home">
-        <section class="hero section-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Software Engineer • Full-Stack Developer</p>
-            <h1>I build bold, scalable web, mobile, and cloud-native products for real-world users.</h1>
-            <p class="hero-text">
-              Software engineer with 4+ years of experience delivering production-grade platforms using Go, Flutter, React/Next.js, Node.js, and Java. I specialize in backend architecture, REST APIs, cloud deployment, and AI-integrated products.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#projects">Explore My Work</a>
-              <a class="btn btn-secondary" href="#contact">Let’s Connect</a>
+        <section class="hero" id="home">
+          <div class="hero-bg" aria-hidden="true">
+            <div class="hero-grid"></div>
+            <div class="hero-blob hero-blob-a" data-parallax="18"></div>
+            <div class="hero-blob hero-blob-b" data-parallax="-14"></div>
+            <div class="hero-blob hero-blob-c" data-parallax="10"></div>
+          </div>
+
+          <div class="hero-inner">
+            <div class="hero-copy" data-reveal>
+              <span class="availability-pill"><span class="availability-dot" aria-hidden="true"></span>Open to Software Engineer roles</span>
+              <p class="eyebrow">Software Engineer</p>
+              <h1>
+                I build bold, scalable products as a
+                <span class="hero-roles" id="hero-roles" aria-live="polite">
+                  <span class="hero-role is-active">Full-Stack Developer</span>
+                  <span class="hero-role">Backend Engineer</span>
+                  <span class="hero-role">Cloud-Native Builder</span>
+                  <span class="hero-role">AI Integrator</span>
+                </span>
+              </h1>
+              <p class="hero-text">
+                Software engineer with 4+ years of experience delivering production-grade platforms using Go, Flutter, React/Next.js, Node.js, and Java. I specialize in backend architecture, REST APIs, cloud deployment, and AI-integrated products.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#projects">Explore My Work</a>
+                <a class="btn btn-secondary" href="Resume SE Worldwide.pdf" target="_blank" rel="noreferrer">Download CV</a>
+                <a class="btn btn-secondary" href="#contact">Let's Connect</a>
+              </div>
+              <div class="hero-socials" id="hero-socials" aria-label="Social links"></div>
+              <ul class="stats">
+                <li><strong data-count-to="4" data-count-suffix="+">0</strong><span>Years building products</span></li>
+                <li><strong data-count-to="6" data-count-suffix="+">0</strong><span>Projects launched</span></li>
+                <li><strong>Remote-ready</strong><span>Cloud and CI/CD workflow</span></li>
+              </ul>
             </div>
-            <ul class="stats">
-              <li><strong>4+</strong><span>Years building products</span></li>
-              <li><strong>6+</strong><span>Projects launched</span></li>
-              <li><strong>Remote-ready</strong><span>Cloud and CI/CD workflow</span></li>
-            </ul>
+            <div class="hero-card" data-reveal="scale">
+              <div class="card-glow" aria-hidden="true"></div>
+              <div class="avatar-wrap">
+                <div class="avatar-ring" aria-hidden="true"></div>
+                <img class="avatar-image" src="https://github.com/Yayawak.png?size=200" onerror="this.src='assets/profile-placeholder.svg'" alt="Apisit Thaweboon" />
+              </div>
+              <h3>Open to Software Engineer and Full-Stack opportunities</h3>
+              <div class="contact-block" id="contact-block"></div>
+              <a href="#about" class="text-link">Learn more about my background →</a>
+            </div>
           </div>
-          <div class="hero-card">
-            <div class="card-glow"></div>
-            <img class="avatar-image" src="https://github.com/Yayawak.png?size=200" alt="Apisit Thaweboon" />
-            <h3>Open to Software Engineer and Full-Stack opportunities</h3>
-            <div class="contact-block" id="contact-block"></div>
-            <a href="#about" class="text-link">Learn more about my background →</a>
-          </div>
+
+          <a href="#about" class="scroll-cue">
+            Scroll
+            <span class="scroll-cue-track"><span class="scroll-cue-dot"></span></span>
+          </a>
         </section>
 
         <section id="about" class="section">
-          <div class="section-heading">
+          <div class="section-heading" data-reveal>
             <p class="eyebrow">About</p>
-            <h2>Education, experience, and a product-minded engineering approach.</h2>
+            <h2>Product-minded engineer building scalable software.</h2>
+            <p class="section-intro">Four years of shipping production systems — from transactional marketplaces to real-time mobile platforms.</p>
           </div>
-          <div class="about-grid">
-            <div class="about-card">
+
+          <div class="about-layout" data-reveal-group>
+            <div class="about-profile about-card">
+              <span class="about-badge">Full-Stack Engineer</span>
               <p>
-                I am currently studying at KMITL University, Thailand, where I earned a Bachelor of Science in Computer Science with a GPA of 3.46/4.0 and Second Class Honours. My coursework covered software engineering, business analysis, data structures, algorithms, and database systems.
+                I graduated from KMITL University, Thailand with a Bachelor of Science in Computer Science (GPA 3.46/4.00, Second Class Honours).
               </p>
               <p>
-                My work spans custom web applications, payment-enabled marketplaces, AI image generation platforms, and location-based social apps. I enjoy building systems that are reliable, secure, highly available, and easy to scale.
+                Over the past four years I have designed and built production-grade web, mobile and cloud-native systems, including payment platforms, AI applications and location-based social products.
+              </p>
+              <p>
+                I enjoy transforming business requirements into reliable, maintainable and scalable software with strong engineering practices.
               </p>
             </div>
-            <div class="about-card">
-              <h3>What I focus on</h3>
+
+            <div class="about-facts about-card">
+              <div class="fact">
+                <h3>4+</h3>
+                <span>Years Experience</span>
+              </div>
+              <div class="fact">
+                <h3>20+</h3>
+                <span>Production Projects</span>
+              </div>
+              <div class="fact">
+                <h3>3.46</h3>
+                <span>University GPA</span>
+              </div>
+              <div class="fact">
+                <h3>Cloud</h3>
+                <span>AWS • Docker • CI/CD</span>
+              </div>
+            </div>
+
+            <div class="about-skills about-card">
+              <h3>Core Expertise</h3>
+              <div class="skill">
+                <span>Backend Architecture</span>
+                <div class="bar"><div data-bar-width="95%"></div></div>
+              </div>
+              <div class="skill">
+                <span>Frontend</span>
+                <div class="bar"><div data-bar-width="90%"></div></div>
+              </div>
+              <div class="skill">
+                <span>Cloud &amp; DevOps</span>
+                <div class="bar"><div data-bar-width="88%"></div></div>
+              </div>
+              <div class="skill">
+                <span>AI Integration</span>
+                <div class="bar"><div data-bar-width="82%"></div></div>
+              </div>
+            </div>
+
+            <div class="about-focus about-card">
+              <h3>Engineering Focus</h3>
               <ul class="check-list">
-                <li>Scalable backend and API design</li>
-                <li>Clean frontend experiences with React/Next.js or Flutter</li>
-                <li>Cloud deployment, CI/CD, and system reliability</li>
-                <li>Security-sensitive product development</li>
+                <li>Scalable backend systems</li>
+                <li>REST API &amp; Microservices</li>
+                <li>Cloud-native deployment</li>
+                <li>CI/CD Automation</li>
+                <li>Security-first development</li>
+                <li>Performance optimization</li>
               </ul>
             </div>
           </div>
         </section>
 
         <section id="projects" class="section">
-          <div class="section-heading">
+          <div class="section-heading" data-reveal>
             <p class="eyebrow">Selected Work</p>
-            <h2>Projects I’ve built and shipped.</h2>
+            <h2>Projects I've built and shipped.</h2>
+            <p class="section-intro">Case studies covering the problem, the architecture, and what I learned.</p>
           </div>
           <div class="card-grid project-grid" id="project-grid"></div>
         </section>
 
-        <section id="techstack" class="section">
-          <div class="section-heading">
-            <p class="eyebrow">Tech Stack</p>
-            <h2>Technologies I’ve used across the stack.</h2>
+        <!-- <section id="experience" class="section">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Experience</p>
+            <h2>Engagements I've delivered end to end.</h2>
+            <p class="section-intro">A chronological look at the systems I've designed, built, and shipped.</p>
           </div>
-          <div class="stack-grid" id="stack-grid"></div>
+          <div class="timeline" id="timeline"></div>
+        </section> -->
+
+        <section id="skills" class="section">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Tech Stack</p>
+            <h2>Technologies I've used across the stack.</h2>
+            <p class="section-intro">Tools I reach for when designing, building, and shipping production software.</p>
+          </div>
+          <div class="stack-grid" id="stack-grid" data-reveal-group></div>
         </section>
 
+
+        <section id="contact" class="section">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Contact</p>
+            <h2>Let's build something reliable together.</h2>
+            <p class="section-intro">Open to Software Engineer and Full-Stack roles — reach out through any of the channels below.</p>
+          </div>
+          <div class="contact-card" data-reveal="scale">
+            <a class="btn btn-primary" href="mailto:apisitthaweboon@gmail.com">Say hello</a>
+            <div class="contact-links" id="contact-links"></div>
+          </div>
+        </section>
       </main>
     </div>
+
+    <footer class="site-footer">
+      <div class="site-shell footer-inner">
+        <div class="footer-brand">
+          <strong>APISIT THAWEBOON</strong>
+          <span>Software Engineer · Bangkok, Thailand</span>
+        </div>
+        <div class="footer-socials" id="footer-socials" aria-label="Social links"></div>
+        <a href="#home" class="back-to-top">Back to top ↑</a>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>

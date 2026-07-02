@@ -1,81 +1,185 @@
 [
   {
-    "id": "marketplace",
-    "title": "Marketplace Website",
-    "short": "A full-stack marketplace for digital goods and gaming services with payments, concurrency, and admin tooling.",
-    "image": "assets/mock-project.svg",
-    "images": [
-      "assets/mock-project.svg",
-      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-    ],
-    "year": "2024",
+    "id": "fortoon",
+    "slug": "fortoon",
+    "title": "Fortoon - Cartoon Platform",
+    "tags": ["Full-Stack", "Platform"],
+    "role": "Full-Stack Engineer",
+    "year": "2023",
+    "short": "A full-stack digital cartoon read / write platform",
     "summary": "Built a scalable marketplace experience for virtual goods and gaming services, combining a polished storefront with transactional backend systems.",
-    "description": [
-      "Developed a full-stack marketplace platform for virtual goods and gaming-related services using React.js, Express.js, MySQL, and Redis.",
-      "Designed backend architecture for concurrent order processing and transactional consistency.",
-      "Integrated payment gateways, user verification systems, and third-party providers.",
-      "Implemented order management, admin dashboards, and security controls based on OWASP best practices."
+    "github": "",
+    "demo": "",
+    "images": ["home.png", "create manga.png", "create post.png"],
+    "overview": "Fortoon is a responsive web platform that enables users to read, publish, and purchase digital comics while providing a community space for interaction between readers and creators.",
+    "features": [
+      "Storefront with catalog browsing and search for virtual goods and gaming services",
+      "Concurrency-safe order processing with transactional consistency",
+      "Integrated payment gateways and user verification",
+      "Admin dashboard for order, inventory, and user management"
+    ],
+    "architecture": "The backend exposes a REST API built on Next.js, backed by MySQL for durable transactional data and Redis for session state and hot-path caching. Order writes are wrapped in database transactions to keep inventory and payment state consistent under concurrent checkouts. The React.js frontend consumes the API directly, with a separate admin surface reusing the same service layer.",
+    "challenges": [
+      "Keeping inventory and order state consistent when multiple buyers checked out the same limited-stock item simultaneously",
+      "Integrating third-party payment providers while keeping failure and retry paths safe for the buyer and the ledger",
+      "Applying OWASP-aligned controls across authentication, input handling, and admin access"
+    ],
+    "process": [
+      "Modeled the order and payment domain before writing any UI, to get transaction boundaries right early",
+      "Built the admin tooling in parallel with the storefront so operational gaps surfaced during development, not after launch",
+      "Layered in caching and query tuning once the core transactional flow was correct and covered by tests"
+    ],
+    "lessons": [
+      "Transactional correctness is cheaper to design up front than to retrofit once real traffic hits shared inventory",
+      "Admin tooling is part of the product, not an afterthought — it shaped several API decisions"
+    ],
+    "stack": ["React.js", "Node.js", "MySQL", "Redis", "Docker", "CI/CD"],
+    "highlights": ["Concurrent order flow", "Transaction-safe payments", "Admin control panel", "Secure authentication"]
+  },
+  {
+    "id": "marketplace",
+    "slug": "marketplace",
+    "title": "Marketplace Website",
+    "tags": ["Full-Stack", "E-Commerce"],
+    "role": "Full-Stack Engineer",
+    "year": "2024",
+    "short": "A full-stack marketplace for digital goods and gaming services with payments, concurrency, and admin tooling.",
+    "summary": "Built a scalable marketplace experience for virtual goods and gaming services, combining a polished storefront with transactional backend systems.",
+    "github": "",
+    "demo": "",
+    "images": ["cover.jpg", "screen-1.jpg", "screen-2.jpg", "screen-3.jpg"],
+    "overview": "A full-stack marketplace platform for virtual goods and gaming-related services, built with React.js, Express.js, MySQL, and Redis. The platform handles the full lifecycle of a digital storefront: browsing, checkout, payment, and post-purchase order management.",
+    "features": [
+      "Storefront with catalog browsing and search for virtual goods and gaming services",
+      "Concurrency-safe order processing with transactional consistency",
+      "Integrated payment gateways and user verification",
+      "Admin dashboard for order, inventory, and user management"
+    ],
+    "architecture": "The backend exposes a REST API built on Express.js, backed by MySQL for durable transactional data and Redis for session state and hot-path caching. Order writes are wrapped in database transactions to keep inventory and payment state consistent under concurrent checkouts. The React.js frontend consumes the API directly, with a separate admin surface reusing the same service layer.",
+    "challenges": [
+      "Keeping inventory and order state consistent when multiple buyers checked out the same limited-stock item simultaneously",
+      "Integrating third-party payment providers while keeping failure and retry paths safe for the buyer and the ledger",
+      "Applying OWASP-aligned controls across authentication, input handling, and admin access"
+    ],
+    "process": [
+      "Modeled the order and payment domain before writing any UI, to get transaction boundaries right early",
+      "Built the admin tooling in parallel with the storefront so operational gaps surfaced during development, not after launch",
+      "Layered in caching and query tuning once the core transactional flow was correct and covered by tests"
+    ],
+    "lessons": [
+      "Transactional correctness is cheaper to design up front than to retrofit once real traffic hits shared inventory",
+      "Admin tooling is part of the product, not an afterthought — it shaped several API decisions"
     ],
     "stack": ["React.js", "Node.js", "MySQL", "Redis", "Docker", "CI/CD"],
     "highlights": ["Concurrent order flow", "Transaction-safe payments", "Admin control panel", "Secure authentication"]
   },
   {
     "id": "ai-image",
+    "slug": "ai-image",
     "title": "AI Image Generation Platform",
-    "short": "An AI-powered product for transforming text prompts into customized artwork with usage credits and dashboards.",
-    "image": "assets/mock-project.svg",
-    "images": [
-      "assets/mock-project.svg",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=1200&q=80"
-    ],
+    "tags": ["AI", "SaaS"],
+    "role": "Frontend & Platform Engineer",
     "year": "2023",
+    "short": "An AI-powered product for transforming text prompts into customized artwork with usage credits and dashboards.",
     "summary": "Delivered an AI image generation experience with prompt-driven generation, subscription-style credit handling, and a business-friendly admin layer.",
-    "description": [
-      "Built the frontend with Next.js and connected the service to the ChatGPT Sora API.",
-      "Implemented user authentication, credit management, and generation usage logic.",
-      "Designed core features for user administration, transaction tracking, and internal control tools."
+    "github": "",
+    "demo": "",
+    "images": ["home.png", "admin.png"],
+    "overview": "A prompt-to-image product built with Next.js on the frontend, connected to the ChatGPT Sora API for generation. The platform wraps AI generation in a usable product layer: accounts, credits, and history, plus internal tools for the team running it.",
+    "features": [
+      "Prompt-driven image generation against the ChatGPT Sora API",
+      "Credit-based usage system with balance tracking per account",
+      "User authentication and generation history",
+      "Internal admin tools for transaction tracking and user oversight"
+    ],
+    "architecture": "The Next.js frontend handles routing, authentication state, and the generation UI, calling a Node.js service layer that proxies requests to the Sora API and persists generation history and credit balances in MySQL. Credit deduction and generation requests are coordinated so a failed generation doesn't consume a user's balance.",
+    "challenges": [
+      "Handling variable AI generation latency without making the UI feel broken or unresponsive",
+      "Keeping credit accounting accurate when generation requests fail or time out",
+      "Designing an admin layer non-technical staff could use to track usage and transactions"
+    ],
+    "process": [
+      "Prototyped the generation flow first against the raw API to understand latency and failure modes",
+      "Built the credit system around those failure modes rather than the happy path",
+      "Added admin visibility once the core product loop was stable"
+    ],
+    "lessons": [
+      "Third-party AI APIs need explicit timeout and retry handling baked into the product logic, not just the network layer",
+      "Usage-based billing logic benefits from being designed alongside the feature it meters, not bolted on after"
     ],
     "stack": ["Next.js", "TypeScript", "MySQL", "Node.js", "CI/CD"],
     "highlights": ["Prompt-based generation", "Credit system", "Authentication", "Admin insight tools"]
   },
   {
     "id": "deekub",
+    "slug": "deekub",
     "title": "Deekub",
-    "short": "A location-based social platform for nightlife venues with real-time interactions and discovery features.",
-    "image": "assets/Deekub landing.png",
-    "images": [
-      "assets/Deekub landing.png",
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
-    ],
+    "tags": ["Mobile", "Social"],
+    "role": "Backend & Mobile Engineer",
     "year": "2022",
+    "short": "A location-based social platform for nightlife venues with real-time interactions and discovery features.",
     "summary": "Created a mobile-first social platform connecting nightlife venues in Bangkok through location-aware experiences and real-time features.",
-    "description": [
-      "Built scalable backend services with clean architecture and dependency injection.",
-      "Developed a cross-platform mobile app with real-time messaging, venue check-ins, and social discovery.",
-      "Implemented REST APIs, authentication, media storage, notifications, and deployment pipelines."
+    "github": "",
+    "demo": "",
+    "images": ["cover.png", "screen-1.png", "screen-2.png", "screen-3.png"],
+    "overview": "A cross-platform mobile app that connects users with nightlife venues in Bangkok through location-aware discovery and real-time social features, backed by a Go service layer built with clean architecture principles.",
+    "features": [
+      "Location-aware venue discovery and check-ins",
+      "Real-time messaging between users",
+      "Cross-platform mobile client built with Flutter",
+      "Media storage and push notifications"
+    ],
+    "architecture": "The backend is written in Go using clean architecture and dependency injection, separating domain logic from delivery (REST, WebSocket) and infrastructure (PostgreSQL, Redis, media storage). The Flutter client talks to the API over REST for standard operations and WebSocket for real-time messaging and presence, with Docker-based deployment pipelines for both.",
+    "challenges": [
+      "Keeping real-time messaging reliable across flaky mobile network conditions",
+      "Structuring the Go backend so domain logic stayed testable and independent of delivery mechanisms",
+      "Handling location data efficiently for proximity-based venue discovery"
+    ],
+    "process": [
+      "Established the clean-architecture boundaries in Go before adding real-time features, to avoid coupling domain logic to WebSocket handling",
+      "Built the Flutter client against a mocked API first so mobile and backend work could proceed in parallel",
+      "Hardened deployment with Docker once core features were feature-complete"
+    ],
+    "lessons": [
+      "Separating domain logic from transport (REST vs WebSocket) early made adding real-time features far less disruptive later",
+      "Mobile-first products need explicit design for intermittent connectivity, not just happy-path networking"
     ],
     "stack": ["Golang", "Flutter", "PostgreSQL", "Docker", "WebSocket", "Redis"],
     "highlights": ["Real-time messaging", "Location features", "Clean architecture", "Cloud deployment"]
   },
   {
-    "id": "business-platform",
-    "title": "Business Platform & Admin Systems",
-    "short": "Custom web products for business workflows, dashboards, and internal operations.",
-    "image": "assets/mock-project.svg",
-    "images": [
-      "assets/mock-project.svg",
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
-    ],
+    "id": "curtain_inventory",
+    "slug": "curtain_inventory",
+    "title": "Inventory System",
+    "tags": ["Web", "Internal Tools"],
+    "role": "Full-Stack Engineer",
     "year": "2024",
+    "short": "Custom web products for business workflows, dashboards, and internal operations.",
     "summary": "Delivered custom business-platform solutions with secure dashboards, workflows, and reliable deployment setups.",
-    "description": [
-      "Built internal and client-facing dashboards with role-based access and workflow management.",
-      "Delivered maintainable web applications using modern frontends and backend APIs.",
-      "Supported business operations through automation, monitoring, and efficient deployment practices."
+    "github": "",
+    "demo": "",
+    "images": ["home.png", "admin.png"],
+    "overview": "A set of internal and client-facing dashboards and workflow tools built with Vue.js and Spring Boot, focused on role-based access, operational visibility, and dependable deployment.",
+    "features": [
+      "Role-based access control across internal and client-facing views",
+      "Workflow management dashboards for day-to-day operations",
+      "Monitoring and automation to reduce manual operational work",
+      "Nginx-fronted deployment on Linux infrastructure"
+    ],
+    "architecture": "Spring Boot exposes the business logic and role-based authorization as a REST API backed by PostgreSQL, with Vue.js consuming it across separate internal and client-facing dashboards. Nginx sits in front of the application as a reverse proxy on Linux, with Docker used to keep deployments repeatable.",
+    "challenges": [
+      "Modeling role-based access so permissions stayed simple to reason about as the number of workflows grew",
+      "Keeping internal and client-facing dashboards consistent while serving different audiences",
+      "Making deployments repeatable across environments without manual intervention"
+    ],
+    "process": [
+      "Mapped out roles and permissions with stakeholders before building any dashboard screens",
+      "Built the API and access-control layer first, then layered the Vue.js dashboards on top",
+      "Automated the deployment path with Docker and Nginx once the application stabilized"
+    ],
+    "lessons": [
+      "Getting role and permission modeling right early avoids painful rework as new workflows get added",
+      "Shared backend, separate frontends is an effective pattern when internal and client audiences need different views of the same data"
     ],
     "stack": ["Vue.js", "Spring Boot", "PostgreSQL", "Docker", "Nginx", "Linux"],
     "highlights": ["Role-based access", "Business workflows", "Secure deployment", "Operational dashboards"]

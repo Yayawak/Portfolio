@@ -1,0 +1,223 @@
+PORTfolioAPISIT THAWEBOON
+(JAY)
+2023-2026
+apisitthaweboon@gmail.com
+F R E E L A N C E S O F T W A R E E N G I N E E R
+Providing custom software solutions for clients through a
+Facebook business page. I manage projects directly with clients
+from requirements gathering, system design, development, to
+deployment. I focus on delivering practical and scalable solutions
+while ensuring clear communication throughout the
+development process.
+2024-2025
+KDAI Backend Developer
+2023 - Present
+FREELANCE SOFTWARE ENGINEER
+MY EXPERIENCE
+About me - JAY
+bachelor of science in computer science
+KING MONGKUT'S INSTITUTE OF TECHNOLOGY LADKRABANG
+Education
+August 2022 - May 2026
+GPA: 3.46 ; Second Class Hornors
+What I do ?
+Fullstack Developer
+Who Explore Every Tech
+Stack
+DEVELOPE INTERACTIVE
+FRONTEND WEB & MOBILE APPS
+INTEGRATION OF THRID PARTY
+SERVICE PAYMENT GATEWAY /
+AWS S3 / DIGITAL OCEANS / OTP
+SERVICE
+DESIGN WHOLE SYSTEM
+ARCHITECTURE
+My Works.
+Software Engineer with hands-
+on experience delivering more than
+10 freelance projects for clients
+across various industries. Skilled in
+designing, developing, and
+deploying scalable backend
+systems and full-stack applications
+while working directly with clients to
+understand business requirements
+and deliver reliable software
+solutions.
+MINIMAL HOSPITAL MANAGEMENT SYSTEM
+IMAGE GENERATION WEBSITE
+See more
+UNIVERSITY WEBSITE CURTAIN STOCK MANAGMENT SYSTEM
+CARTOON READ/WRITE PLATFORM
+Aimagine - Image Generation Website
+Developed a full-stack AI content generation platform as a solo developer,
+taking full ownership of the project from architecture design to production
+deployment. The platform integrates the OpenAI Chat API and Sora image
+generation API to deliver AI-powered text and image generation services. Built
+using Next.js, Prisma ORM, MySQL, and Docker, the application includes secure
+authentication, credit-based billing, usage analytics, and an administrative
+dashboard. Successfully deployed the containerized application to a production
+environment on DigitalOcean Cloud, managing the complete development,
+deployment, and maintenance lifecycle independently.
+Designed and developed the entire system architecture as a solo developer.
+Built the frontend using Next.js with responsive and modern UI/UX.
+Developed backend APIs for authentication, AI generation, credit management, user
+management, and analytics.
+Integrated OpenAI Chat API for conversational AI capabilities.
+Integrated Sora image generation API to provide AI-powered image creation.
+Designed and implemented the MySQL database schema using Prisma ORM.
+Implemented secure authentication, authorization, and session management.
+Developed a credit-based usage system for AI text and image generation.
+Built an admin dashboard featuring user analytics, revenue tracking, prompt statistics, visitor
+monitoring, and recent activity logs.
+Implemented API communication, error handling, request validation, and rate limiting.
+Containerized the application using Docker to ensure consistent development and
+deployment environments.
+Managed the complete software development lifecycle, including system design,
+implementation, testing, debugging, deployment, and maintenance.
+Responsibilities
+Landing Page
+Admin Dashboard
+: 2025
+Year
+Minimal Hospital management website
+Developed a responsive hospital management web application that enables administrators to manage staff, work shifts, and medical equipment
+efficiently. The system provides an intuitive interface for organizing hospital operations across desktop and mobile devices.
+2024
+Year
+Frontend Next.js
+Backend Next.js
+Database Mysql
+Figma Prototype Home Page Website
+Database Design
+Developed patient management modules, including patient creation and
+editing functionalities, for a responsive hospital management web
+application.
+Served as T eam Lead, overseeing task delegation, team coordination, and
+overall project progress.
+Designed and structured the database architecture to ensure efficient data
+management and system scalability.
+Managed project workflow and supervised development to maintain code
+quality and timely delivery.
+Responsibilities
+Curtain Stock Management System
+: 2024
+Year
+Developed a secure back-office inventory management system for curtain-related
+products such as curtains, rails, and accessories. The system is designed exclusively for
+administrators to manage all internal stock operations without any customer-facing
+access. It supports multi-platform usage across web and tablet devices providing
+nventory tracking, stock usage management, purchase order creation, reporting, and
+dashboard analytics. The system was built using Flutter for the frontend, Golang for the
+backend, PostgreSQL as the database, Redis for caching and performance optimization,
+and Docker for containerized deployment.
+Designed and implemented the overall system architecture for a scalable inventory
+management platform.
+Developed core inventory features including stock viewing, stock withdrawal (usage), and
+stock updates.
+Built purchase order creation and management workflows to support procurement
+processes.
+Implemented dashboard and reporting modules for business insights and inventory
+monitoring.
+Developed responsive cross-platform UI using Flutter for Web and Tablet (iPad support).
+Designed and optimized PostgreSQL database schema for efficient and reliable data
+management.
+Utilized Redis for caching and improving system performance.
+Containerized the system using Docker for consistent development and deployment
+environments.
+Acted as system owner and technical lead, overseeing development workflow and
+ensuring system stability.
+Responsibilities
+Cartoon Reading / Writing Platform
+Fortoon is a responsive web platform that enables users to read, publish,
+and purchase digital comics while providing a community space for interaction
+between readers and creators.
+Developed and maintained the backend architecture and RESTful APIs for a digital
+comic platform.
+Designed the relational database schema and optimized database relationships.
+Implemented secure user authentication and login APIs using JWT .
+Built Role-Based Access Control (RBAC) for Readers, Authors, and Administrators.
+Developed story management APIs for delivering comic content to readers.
+Implemented the author workflow for creating, editing, and publishing comics and
+chapters.
+Integrated Cloudinary Object Storage for image upload, storage, optimization, and
+content delivery.
+Designed APIs for efficient image management and media retrieval.
+Collaborated with frontend developers to integrate backend services and ensure
+seamless application functionality.
+Improved backend scalability, maintainability, and API performance.
+2024
+Year
+Frontend Next.js
+Backend Next.js
+Database Mysql
+Other Techs Docker, Image Storage
+Responsibilities
+University Scienc e Faculty Website
+2023 - 2024
+Year
+React.js, tailwind
+Frontend
+Developed a modern, responsive website for the Faculty of Science to replace the
+existing legacy website. The project aimed to improve accessibility, user experience,
+and content management for students, staff, and visitors. Development was carried
+out by a large cross-functional team following the Agile methodology, using ClickUp
+for project management and Sprint planning over a six-month development period.
+Developed responsive frontend interfaces for the Faculty of Science website.
+Designed UI/UX mockups in Figma for the Laboratory Directory and Personnel
+pages.
+Implemented the Laboratory Directory page to showcase laboratories and research
+facilities.
+Developed the Personnel page to display faculty members and staff information.
+Integrated frontend components with backend RESTful APIs to retrieve and present
+dynamic data.
+Collaborated with backend developers, designers, and other team members
+throughout the Agile development lifecycle.
+Participated in Sprint planning, task estimation, code reviews, and team discussions
+using ClickUp.
+Responsibilities
+Website
+UX / UI Figma Design
+Fasion Recommendation Website
+Developed an AI-powered fashion recommendation web application that enables
+users to upload clothing images and receive visually similar fashion item
+recommendations using a custom-trained deep learning model. The frontend was
+developed with React.js, while the backend was built using Flask (Python) to provide
+RESTful APIs for image processing and AI inference. The system analyzes uploaded
+images, extracts visual features, performs similarity matching against a fashion
+dataset, and returns the most relevant clothing recommendations.
+Developed the backend application using Flask (Python) and designed the complete RESTful
+API architecture.
+Built APIs for image upload, AI inference, recommendation retrieval, and response handling.
+T rained and evaluated a custom deep learning model for visual similarity search and fashion
+recommendation.
+Designed communication between the React.js frontend and Flask backend through RESTful
+APIs.
+Collaborated with frontend developers to define API contracts and ensure seamless system
+integration.
+2024
+Year
+Frontend React
+Backend Flask
+Other Techs Redis, Tensorflow (AI)
+Responsibilities
+42 BANGKOK’S STUDENT
+University Activities
+42 Bangkok student in a peer-to-peer learning environment without lecturers,
+focusing on self-learning, coding projects, and collaborative problem-solving.
+Actively collaborated with international peers, with over 50% of communication
+conducted in English, strengthening teamwork and communication skills in a
+diverse environment.
+TRADITIONAL FOOTBALL MATCH & SPORTS 3K (งานฟุตบอลสามพระจอม)
+Served as staff member for the 3K Traditional Football Match & Sports, assisting in
+event coordination and on-site operations.
+Developed strong communication and interpersonal skills through active
+interaction with participants and teamwork with organizers in a dynamic event
+environment
+L e t ’ s b u i l d
+i m p a c t f u l s o l u t i o n s
+t o g e t h e r
+E-mail
+apisitthaweboon@gmail.com
+Telephone
+(+66)96-734-9476

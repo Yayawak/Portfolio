@@ -3,35 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project | Apisit Thaweboon</title>
+    <meta name="description" content="Case study detail page." />
+    <title id="page-title">Project | Apisit Thaweboon</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="project.css" />
   </head>
   <body>
     <div class="site-shell project-page">
       <a class="back-link" href="index.html">← Back to portfolio</a>
-      <section class="project-hero">
+
+      <section class="project-hero" data-reveal>
         <p class="eyebrow">Case Study</p>
         <h1 id="project-title">Project</h1>
-        <p id="project-summary"></p>
         <div class="project-meta" id="project-meta"></div>
+        <p class="project-summary" id="project-summary"></p>
+        <div class="project-links" id="project-links"></div>
       </section>
 
       <section class="detail-grid">
-        <article class="project-page-card">
-          <div class="project-gallery" id="project-gallery"></div>
-          <h3 style="margin-top: 20px;">What I built</h3>
-          <ul id="project-description"></ul>
-        </article>
-        <article class="project-page-card">
-          <h3>Tech stack</h3>
-          <div class="pill-list" id="project-stack"></div>
-          <h3 style="margin-top: 20px;">Highlights</h3>
-          <ul id="project-highlights"></ul>
-        </article>
+        <div class="detail-main">
+          <article class="project-page-card" data-reveal>
+            <h3 class="card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M3 13l4-4 4 4 6-6 4 4"/></svg>
+              Gallery
+            </h3>
+            <div class="project-gallery" id="project-gallery"></div>
+          </article>
+
+          <article class="project-page-card" data-reveal>
+            <h3 class="card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+              Overview
+            </h3>
+            <p id="project-overview"></p>
+          </article>
+
+          <article class="project-page-card" data-reveal>
+            <h3 class="card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5z"/></svg>
+              Key Features
+            </h3>
+            <ul class="feature-list" id="project-features"></ul>
+          </article>
+
+          <article class="project-page-card" data-reveal>
+            <h3 class="card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="9" y="14" width="6" height="6" rx="1"/><path d="M7 10v2a2 2 0 0 0 2 2h1M17 10v2a2 2 0 0 1-2 2h-1"/></svg>
+              Architecture
+            </h3>
+            <p class="architecture-text" id="project-architecture"></p>
+          </article>
+
+          <article class="project-page-card" data-reveal>
+            <h3 class="card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L14.7 3.86a2 2 0 0 0-3.4 0z"/></svg>
+              Challenges
+            </h3>
+            <ul class="challenge-list" id="project-challenges"></ul>
+          </article>
+
+          <article class="project-page-card" data-reveal>
+            <h3 class="card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+              Development Process
+            </h3>
+            <ol class="process-list" id="project-process"></ol>
+          </article>
+
+          <article class="project-page-card" data-reveal>
+            <h3 class="card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/></svg>
+              Lessons Learned
+            </h3>
+            <ul class="lessons-list" id="project-lessons"></ul>
+          </article>
+        </div>
+
+        <aside class="detail-side">
+          <article class="project-page-card" data-reveal>
+            <h3 class="card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 1-4.5 4.5L17.5 20 12 17l-5.5 3 1-6.5L3 9l6-1z"/></svg>
+              Tech Stack
+            </h3>
+            <div class="pill-list" id="project-stack"></div>
+          </article>
+
+          <article class="project-page-card" data-reveal>
+            <h3 class="card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Highlights
+            </h3>
+            <ul id="project-highlights"></ul>
+          </article>
+        </aside>
       </section>
+
+      <nav class="project-switch" id="project-switch" aria-label="Other projects"></nav>
     </div>
 
     <script src="script.js"></script>
