@@ -17,6 +17,7 @@ const techIcons = {
   Flutter: 'https://cdn.simpleicons.org/flutter/02569b',
   Golang: 'https://cdn.simpleicons.org/go/00add8',
   'Java Spring Boot': 'https://cdn.simpleicons.org/spring/6db33f',
+  'Spring Boot': 'https://cdn.simpleicons.org/spring/6db33f',
   Docker: 'https://cdn.simpleicons.org/docker/2496ed',
   'CI/CD': 'https://cdn.simpleicons.org/githubactions/2088ff',
   PostgreSQL: 'https://cdn.simpleicons.org/postgresql/4169e1',
@@ -94,6 +95,54 @@ function renderSkillGroups() {
   `).join('');
 }
 
+function renderProjectGallery(project) {
+  const container = document.getElementById('project-gallery');
+  if (!container) return;
+
+  const images = Array.isArray(project.images) && project.images.length > 0
+    ? project.images
+    : [project.image];
+
+  container.innerHTML = `
+    <div class="project-gallery-frame">
+      <div class="project-gallery-track">
+        ${images.map((src, index) => `
+          <figure class="project-gallery-slide${index === 0 ? ' is-active' : ''}">
+            <img src="${src}" alt="${project.title} showcase ${index + 1}" />
+          </figure>
+        `).join('')}
+      </div>
+    </div>
+    ${images.length > 1 ? `
+      <div class="project-gallery-controls">
+        <div class="project-gallery-dots">
+          ${images.map((_, index) => `
+            <button class="project-gallery-dot${index === 0 ? ' is-active' : ''}" type="button" data-index="${index}" aria-label="Show image ${index + 1}"></button>
+          `).join('')}
+        </div>
+      </div>
+    ` : ''}
+  `;
+
+  if (images.length <= 1) return;
+
+  const slides = Array.from(container.querySelectorAll('.project-gallery-slide'));
+  const dots = Array.from(container.querySelectorAll('.project-gallery-dot'));
+  let currentIndex = 0;
+
+  const updateGallery = (nextIndex) => {
+    currentIndex = (nextIndex + slides.length) % slides.length;
+    slides.forEach((slide, index) => slide.classList.toggle('is-active', index === currentIndex));
+    dots.forEach((dot, index) => dot.classList.toggle('is-active', index === currentIndex));
+  };
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => updateGallery(Number(dot.dataset.index)));
+  });
+
+  setInterval(() => updateGallery(currentIndex + 1), 4500);
+}
+
 async function loadProjects() {
   try {
     const response = await fetch('data/projects.json');
@@ -103,7 +152,9 @@ async function loadProjects() {
     if (grid) {
       grid.innerHTML = projects.map((project) => `
         <article class="project-card">
-          <img class="project-preview" src="${project.image}" alt="${project.title}" />
+          <center>
+            <img class="project-preview" src="${project.image}" alt="${project.title}" />
+          </center>
           <h3>${project.title}</h3>
           <p>${project.short}</p>
           <div class="tag-row">${renderTechChips(project.stack.slice(0, 4))}</div>
@@ -130,6 +181,7 @@ async function loadProjects() {
         description.innerHTML = project.description.map((item) => `<li>${item}</li>`).join('');
         stack.innerHTML = renderTechChips(project.stack);
         highlights.innerHTML = project.highlights.map((item) => `<li>${item}</li>`).join('');
+        renderProjectGallery(project);
       }
     }
   } catch (error) {
