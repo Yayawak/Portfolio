@@ -481,6 +481,61 @@ li {
   font-size: 0.88rem;
 }
 
+/* Professional skill bars (about section) */
+.about-skills {
+  padding: var(--space-4) 0 0 0;
+}
+.about-skills h3 {
+  margin-bottom: var(--space-4);
+}
+.about-skills .skill {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.about-skills .skill span {
+  flex: 0 0 260px;
+  color: var(--text);
+  font-weight: 600;
+}
+.about-skills .bar {
+  flex: 1 1 auto;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+.about-skills .bar > div {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  box-shadow: inset 0 6px 18px rgba(16, 24, 40, 0.35);
+  border-radius: 999px;
+  transition: width 1s var(--ease);
+  position: relative;
+}
+.about-skills .bar > div::after {
+  content: attr(data-bar-width);
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 700;
+  color: var(--bg);
+  background: rgba(255,255,255,0.12);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 680px) {
+  .about-skills .skill span { flex: 0 0 140px; font-size: 0.95rem; }
+  .about-skills .bar > div::after { right: 6px; font-size: 0.78rem; padding: 2px 6px; }
+}
+
 /* Tech icon chips (homepage Skills grid + project detail Tech Stack) */
 
 .tech-chip {

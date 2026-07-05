@@ -1,0 +1,54 @@
+{
+  "name": "Apisit Thaweboon",
+  "displayName": "JAY",
+  "title": "Software Engineer / Full-Stack Developer",
+  "email": "apisitthaweboon@gmail.com",
+  "phone": "+66967349476",
+  "location": "Bangkok, Thailand",
+  "summary": "Software engineer with hands-on experience delivering production systems and freelance projects. Skilled in backend architecture, REST APIs, cloud deployment, and AI-integrated products.",
+  "education": {
+    "degree": "Bachelor of Science in Computer Science",
+    "school": "King Mongkut's Institute of Technology Ladkrabang",
+    "start": "2022-08",
+    "end": "2026-05",
+    "gpa": "3.46"
+  },
+  "experience": [
+    {
+      "role": "Freelance Software Engineer",
+      "from": "2023",
+      "to": "Present",
+      "details": "Providing custom software solutions for clients: requirements, design, development, and deployment. Delivered 10+ freelance projects across industries."
+    },
+    {
+      "role": "KDAI Backend Developer",
+      "from": "2024",
+      "to": "2025",
+      "details": "Backend development responsibilities (KDAI)."
+    }
+  ],
+  "coreExpertise": [
+    { "name": "Backend Architecture", "level": "95%" },
+    { "name": "Frontend", "level": "90%" },
+    { "name": "Cloud & DevOps", "level": "88%" },
+    { "name": "AI Integration", "level": "82%" }
+  ],
+  "projectsReference": [
+    "ai-image",
+    "fortoon",
+    "curtain_inventory",
+    "deekub",
+    "marketplace"
+  ],
+  "highlights": [
+    "Designed and deployed AI image generation platform (Next.js, MySQL, Docker)",
+    "Built inventory management and internal workflow tools (Flutter, Golang, PostgreSQL)",
+    "Delivered mobile-first real-time apps with Go backend and Flutter frontends"
+  ],
+  "contactLinks": {
+    "github": "https://github.com/Yayawak",
+    "email": "apisitthaweboon@gmail.com",
+    "phone": "+66967349476",
+    "location": "Bangkok, Thailand"
+  }
+}
